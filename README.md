@@ -2,9 +2,9 @@
 
 A simple web application that generates images based on your text prompt using the Pexels API. Enter a prompt, click "Generate Image", and download the result!
 
-## 🚀 Live Demo
 
-[Click here to try the AI Image Generator!](https://ajinkyashinde818.github.io/Image-Generator/)
+
+## [Live Demo](https://ajinkyashinde818.github.io/Image-Generator/)
 
 
 ## Features
