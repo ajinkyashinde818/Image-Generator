@@ -1,27 +1,22 @@
 async function fetchImages(category) {
     try {
-        const apiKey = 'h5EOQLwDCnaUrRrirJG2FQDNFDBJdrCJ5n2BE1oSLR8w9kgFLJ2w419B'; // Your Pexels API key
-        // Random page between 1 and 10 for more randomness
+        const accessKey = 'Y_5iB2Dx-tVd3c4cpogyE83kA__h_dq6Jrrs2RTa6O8'; // Your Unsplash API key
         const randomPage = Math.floor(Math.random() * 10) + 1;
-        const apiUrl = `https://api.pexels.com/v1/search?query=${encodeURIComponent(category)}&per_page=10&page=${randomPage}`;
-        let response = await fetch(apiUrl, {
-            headers: {
-                Authorization: apiKey
-            }
-        });
+        const apiUrl = `https://api.unsplash.com/search/photos?query=${encodeURIComponent(category)}&per_page=10&page=${randomPage}&client_id=${accessKey}`;
+        let response = await fetch(apiUrl);
         if (!response.ok) {
             throw new Error('Unable to fetch the data');
         }
         let data = await response.json();
-        if (!data.photos || data.photos.length === 0) {
+        if (!data.results || data.results.length === 0) {
             imageContainerText.innerText = "No image found for this prompt!";
             imageGenerated.style.display = "none";
             downloadBtn.style.display = "none";
             return;
         }
-        // Pick a random image from the returned photos
-        const randomIndex = Math.floor(Math.random() * data.photos.length);
-        const imageUrl = data.photos[randomIndex].src.large;
+        // Pick a random image from the returned results
+        const randomIndex = Math.floor(Math.random() * data.results.length);
+        const imageUrl = data.results[randomIndex].urls.regular;
 
         imageContainerText.innerText = "Below is your generated Image:";
         imageContainer.style.display = "block";
