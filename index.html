@@ -2,15 +2,32 @@
 <html lang="en">
 
 <head>
-    <!-- Define the character encoding and viewport settings -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Page title -->
-    <title>
-      AI Image generator 
-    </title>
-    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ✅ Google Site Verification -->
+    <meta name="google-site-verification" content="1PC_lK1J9pNrCmubZ_HrAJK9aLX1iz7DX_mBs5f9mck" />
+
+    <!-- Basic SEO -->
+    <title>Free AI Image Generator - Convert Text to Images</title>
+    <meta name="description" content="Generate beautiful AI images from any text prompt using this free online image generator tool. No login required.">
+    <meta name="keywords" content="image generator, AI image generator, text to image, generate image from text, free AI tool">
+    <meta name="author" content="Ajinkya Shinde" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph for social sharing -->
+    <meta property="og:title" content="Free AI Image Generator" />
+    <meta property="og:description" content="Turn your text into stunning images using this free, easy-to-use AI image generator." />
+    <meta property="og:image" content="https://ajinkyashinde818.github.io/Image-Generator/preview.png" />
+    <meta property="og:url" content="https://ajinkyashinde818.github.io/Image-Generator/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Image Generator">
+    <meta name="twitter:description" content="Generate stunning images from any prompt with this free tool.">
+    <meta name="twitter:image" content="https://ajinkyashinde818.github.io/Image-Generator/preview.png">
+
     <!-- Link to external CSS file for styling -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -18,29 +35,24 @@
 <body>
     <!-- Main container for all the content -->
     <div class="main-container">
-
         <!-- Container for the heading and form -->
         <div class="container" role="main" aria-label="AI Image Generator">
-            
             <!-- Section for page headings -->
             <div class="headings-container">
-                <h1>AI Image Generator</h1> <!-- Main heading -->
+                <h1>AI Image Generator</h1>
+                <p>Type any text prompt and generate an AI image instantly. This tool uses advanced technology to convert your imagination into visual art!</p>
                 <h2 class="heading">
-                  	AI Image generator website using JavaScript
-                </h2> <!-- Secondary heading explaining the purpose -->
+                    AI Image generator website using JavaScript
+                </h2>
                 <h5 class="sub-heading">
-                  Enter the text in the below input bar and 
-                  <br />
-                  get the AI generated image related to this text.
-                </h5> <!-- Subheading with instructions -->
+                    Enter the text in the below input bar and 
+                    <br />
+                    get the AI generated image related to this text.
+                </h5>
             </div>
-
             <!-- Form container for input and submit button -->
             <div id="generate-image-form" class="form-container">
-                
-                <!-- Form to input text and generate image -->
                 <form class="my-form" autocomplete="off">
-                    <!-- Text input for the user to enter some text -->
                     <label for="input-value" class="visually-hidden">Enter prompt text</label>
                     <input id="input-value" 
                            placeholder="Enter some text..." 
@@ -48,29 +60,20 @@
                            class="form-input form-controls"
                            aria-label="Prompt for AI image generation"
                            required>
-
-                    <!-- Button to submit and generate image -->
                     <button type="submit" 
-                            class="image-generate-btn 
-                                   form-controls"
+                            class="image-generate-btn form-controls"
                             aria-label="Generate Image">
-                      	Generate Image
+                        Generate Image
                     </button>
                 </form>
             </div>
-
             <!-- Section to display the generated image -->
             <div id="images-visible" class="image-container" aria-live="polite">
-                <!-- Placeholder text that will be updated with the result -->
                 <p id="imageContainerText"></p>
-                
-                <!-- Image tag to display the AI generated image -->
                 <img id="generated-image" 
                      class="my-generated-image" 
                      src='' alt="AI Generated Image"
                      style="display: none;">
-
-                <!-- Download button, hidden by default -->
                 <a id="download-btn"
                    class="image-generate-btn"
                    href="#"
@@ -82,7 +85,6 @@
             </div>
         </div>
     </div>
-
     <script src="index.js"></script>
     <style>
       /* Visually hidden class for accessibility */
